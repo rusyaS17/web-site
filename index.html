@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Деректер базасы курсы - 15 лекция, 9 зертхана</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Жүктеу индикаторы -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+        <p>Сайт жүктелуде...</p>
+    </div>
+
+    <!-- Үстіңгі бет -->
+<!-- Header бөлімінде (header-content ішінде) -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-database"></i>
+                <h1>Деректер базасы курсы</h1>
+            </div>
+            
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="active"><i class="fas fa-home"></i> Басты бет</a></li>
+                    <li><a href="#lectures"><i class="fas fa-book"></i> Лекциялар</a></li>
+                    <li><a href="#labs"><i class="fas fa-flask"></i> Зертханалар</a></li>
+                    <li><a href="#tests"><i class="fas fa-question-circle"></i> Тесттер</a></li>
+                    <li><a href="#tasks"><i class="fas fa-tasks"></i> Тапсырмалар</a></li>
+                    <li><a href="#progress"><i class="fas fa-chart-line"></i> Прогресс</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <!-- Бет басы -->
+<!-- Hero бөлімін өзгерту керек (шамамен 90-жол) -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <!-- УНИВЕРСИТЕТ АТЫ -->
+                <div style="margin-bottom: 1.5rem; background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 10px; border-left: 4px solid var(--secondary-color);">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 0.5rem;">
+                        <i class="fas fa-university"></i> ҚАЗАҚ ҰЛТТЫҚ АГРАРЛЫҚ ЗЕРТТЕУ УНИВЕРСИТЕТІ
+                    </h3>
+
+                </div style="margin-bottom: 1.5rem; background: rgba(255, 255, 255, 0.08); padding: 0.8rem; border-radius: 8px;">
+                    <p style="margin-bottom: 0.3rem;">
+                        <i class="fas fa-graduation-cap"></i> «Су ресурстары және IT-технологиясы» факультеті
+                    </p>
+                    <p>
+                        <i class="fas fa-laptop-code"></i> «ІТ-технологиясы» кафедрасы
+                    </p>
+                </div>
+                
+
+
+                <!-- КУРС ТАҚЫРЫБЫ -->
+                <h2>Деректер базасы технологиялары</h2>
+                <p>15 лекция, 9 зертханалық жұмыс, тесттер және практикалық тапсырмалар</p>
+                
+                <!-- СТАТИСТИКА -->
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-book-open"></i>
+                        <span>24 оқу материалы</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-clock"></i>
+                        <span>60 сағат оқу</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Білім алу</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Негізгі мазмұн -->
+    <main class="container main-content">
+        <!-- Лекциялар бөлімі -->
+        <section id="lectures" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-book"></i> Лекциялар</h2>
+                <p class="section-subtitle">15 лекциядан тұратын толық курс</p>
+            </div>
+            
+            <div class="search-filter">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="lecture-search" placeholder="Лекцияны іздеу...">
+                </div>
+            </div>
+            
+            <div class="lectures-grid" id="lectures-container">
+                <!-- Лекциялар мұнда JS арқылы толтырылады -->
+            </div>
+        </section>
+
+        <!-- Зертханалық жұмыстар бөлімі -->
+        <section id="labs" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-flask"></i> Зертханалық жұмыстар</h2>
+                <p class="section-subtitle">Практикалық дағдыларды дамыту үшін 9 зертхана</p>
+            </div>
+            
+            <div class="labs-grid" id="labs-container">
+                <!-- Зертханалар мұнда JS арқылы толтырылады -->
+            </div>
+        </section>
+
+        <!-- Тесттер бөлімі -->
+        <section id="tests" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-question-circle"></i> Тесттер</h2>
+                <p class="section-subtitle">Әр лекция үшін 10 сұрақтан тұратын тест</p>
+            </div>
+            
+            <div class="lectures-grid" id="tests-container">
+                <!-- Тесттер мұнда JS арқылы толтырылады -->
+            </div>
+        </section>
+
+        <!-- Тапсырмалар бөлімі -->
+        <section id="tasks" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-tasks"></i> Тапсырмалар</h2>
+                <p class="section-subtitle">Әр лекция үшін 5 практикалық тапсырма</p>
+            </div>
+            
+        <button class="btn btn-secondary" onclick="viewAllTasks()" style="margin-top: 1rem;">
+            <i class="fas fa-history"></i> Жіберілген тапсырмаларды көру
+        </button>
+    </div>
+    
+    <div class="lectures-grid" id="tasks-container">
+        <!-- Тапсырмалар мұнда JS арқылы толтырылады -->
+    </div>
+</section>
+            <div class="lectures-grid" id="tasks-container">
+                <!-- Тапсырмалар мұнда JS арқылы толтырылады -->
+            </div>
+        </section>
+
+        <!-- Прогресс бөлімі -->
+        <section id="progress" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Оқу прогрессі</h2>
+            </div>
+            <div class="progress-container">
+                <div class="card">
+                    <h3>Жалпы прогресс</h3>
+                    <div class="progress-circle" id="progress-circle">
+                        <span class="progress-value" id="progress-value">0%</span>
+                    </div>
+                    <div class="progress-details">
+                        <div class="detail">
+                            <span>Лекциялар</span>
+                            <span class="value" id="lectures-completed">0/15</span>
+                        </div>
+                        <div class="detail">
+                            <span>Зертханалар</span>
+                            <span class="value" id="labs-completed">0/15</span>
+                        </div>
+                        <div class="detail">
+                            <span>Тесттер</span>
+                            <span class="value" id="tests-completed">0/15</span>
+                        </div>
+                        <div class="detail">
+                            <span>Тапсырмалар</span>
+                            <span class="value" id="tasks-completed">0/15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PDF Viewer модалды терезесі -->
+    <div class="modal" id="pdf-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="pdf-title">PDF қарау</h3>
+                <button class="btn-close" id="close-pdf-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="pdf-info">
+                    <p>PDF файлы жаңа вкладкада ашылады. Егер ашылмаса, браузердің блоктауын тексеріңіз.</p>
+                    <button class="btn btn-primary" id="open-pdf-btn">
+                        <i class="fas fa-external-link-alt"></i> PDF файлын ашу
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Тест модалды терезесі -->
+    <div class="modal" id="test-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="test-title">Тест тапсыру</h3>
+                <div class="test-timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="test-time">30:00</span>
+                </div>
+                <button class="btn-close" id="close-test-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="test-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="test-progress-bar"></div>
+                    </div>
+                    <span id="test-progress-text">1/10 сұрақ</span>
+                </div>
+                
+                <div class="test-content" id="test-content">
+                    <!-- Тест сұрақтары мұнда толтырылады -->
+                </div>
+                
+                <div class="test-controls">
+                    <button class="btn btn-secondary" id="prev-question-btn">
+                        <i class="fas fa-arrow-left"></i> Алдыңғы
+                    </button>
+                    <button class="btn btn-primary" id="next-question-btn">
+                        Келесі <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-success" id="submit-test-btn" style="display: none;">
+                        <i class="fas fa-paper-plane"></i> Тестті аяқтау
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Тапсырма модалды терезесі -->
+    <div class="modal" id="task-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="task-title">Тапсырма</h3>
+                <button class="btn-close" id="close-task-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="task-content" id="task-content">
+                    <!-- Тапсырма мәтіні мұнда толтырылады -->
+                </div>
+                
+                <div class="task-instructions">
+                    <h4><i class="fas fa-info-circle"></i> Нұсқаулар:</h4>
+                    <ul>
+                        <li>Тапсырманы мұқият оқыңыз</li>
+                        <li>Барлық талаптарды орындаңыз</li>
+                        <li>Мерзімі: 7 күн</li>
+                    </ul>
+                </div>
+                
+                <div class="task-submission">
+                    <div class="upload-area" id="upload-area">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Тапсырманы осы жерге жазыңыз немесе файл жүктеңіз</p>
+                        <textarea id="task-text" rows="6" placeholder="Тапсырманың жауабын осында жазыңыз..."></textarea>
+                        <input type="file" id="task-file" style="margin-top: 1rem;">
+                    </div>
+                    
+                    <div class="task-actions" style="margin-top: 2rem;">
+                        <button class="btn btn-primary" id="submit-task-btn">
+                            <i class="fas fa-paper-plane"></i> Тапсырманы жіберу
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Нәтижелер модалды терезесі -->
+    <div class="modal" id="results-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Тест нәтижесі</h3>
+                <button class="btn-close" id="close-results-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="results-content" id="results-content">
+                    <!-- Нәтижелер мұнда көрсетіледі -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Төменгі бет -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-database"></i> Деректер базасы курсы</h3>
+                    <p>2024 жыл. Оқу материалы.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Беттер</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#home" style="color: var(--text-secondary); text-decoration: none;">Басты бет</a></li>
+                        <li><a href="#lectures" style="color: var(--text-secondary); text-decoration: none;">Лекциялар</a></li>
+                        <li><a href="#labs" style="color: var(--text-secondary); text-decoration: none;">Зертханалар</a></li>
+                        <li><a href="#tests" style="color: var(--text-secondary); text-decoration: none;">Тесттер</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Деректер базасы курсы - 15 лекция, 15 зертхана</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

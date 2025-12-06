@@ -716,3 +716,211 @@ body {
     position: absolute;
     left: 0;
 }
+/* МОБИЛЬДІ БАПТАУЛАР */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+    }
+    
+    .stat {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .card {
+        padding: 1rem;
+    }
+    
+    .card-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .card-content p {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .lectures-grid,
+    .labs-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .modal-content {
+        max-width: 95%;
+        margin: 0.5rem auto;
+        max-height: 95vh;
+    }
+    
+    .modal-header {
+        padding: 1rem;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+    
+    .pdf-container {
+        height: 50vh;
+    }
+    
+    .test-question {
+        padding: 1rem;
+    }
+    
+    .test-option {
+        padding: 0.6rem;
+    }
+    
+    .upload-area {
+        padding: 1.5rem;
+    }
+    
+    .upload-area textarea {
+        font-size: 0.9rem;
+    }
+    
+    /* Батырмаларды мобильге лайықтыру */
+    .card-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .card-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Навигацияны мобильге лайықтыру */
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .main-nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Герой бөлімін мобильге лайықтыру */
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-stats .stat {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Тема ауыстыру батырмасы */
+    .theme-switcher {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    
+    .btn-theme {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* PDF басқару элементтері */
+    .pdf-controls {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .pdf-controls > div {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Тест басқару элементтері */
+    .test-controls {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .test-controls .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Тапсырма текстареасы */
+    #task-text {
+        font-size: 1rem;
+    }
+}
+
+/* ПЛАНШЕТ БАПТАУЛАРЫ */
+@media (min-width: 481px) and (max-width: 768px) {
+    .lectures-grid,
+    .labs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .card-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .card-actions .btn {
+        width: 100%;
+    }
+    
+    .modal-content {
+        max-width: 90%;
+    }
+}
+
+/* ТАЧ СКРИН БАПТАУЛАРЫ */
+@media (hover: none) and (pointer: coarse) {
+    /* Тачскрин үшін батырмаларды үлкейту */
+    .btn, .test-option, .card-actions button {
+        min-height: 44px;
+    }
+    
+    /* Тачскрин үшін инпуттарды үлкейту */
+    input, select, textarea, button {
+        font-size: 16px !important; /* iOS zoom болдырмау */
+    }
+    
+    /* Тачскрин үшін радио батырмаларды үлкейту */
+    .test-option input[type="radio"] {
+        width: 24px;
+        height: 24px;
+    }
+    
+    /* Тачскрин үшін модалды терезені жабу */
+    .btn-close {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* IOS БАПТАУЛАРЫ */
+@supports (-webkit-touch-callout: none) {
+    .modal-content {
+        max-height: -webkit-fill-available;
+    }
+    
+    .pdf-container {
+        height: calc(100vh - 200px);
+    }
+}
